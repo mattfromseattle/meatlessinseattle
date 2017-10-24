@@ -24,12 +24,12 @@ angular
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        //controllerAs: 'main'
       })
       .when('/recipes', {
         templateUrl: 'views/recipes.html',
         controller: 'RecipesCtrl',
-        controllerAs: 'recipes'
+        //controllerAs: 'recipes'
       })
       .otherwise({
         redirectTo: '/'
