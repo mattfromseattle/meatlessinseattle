@@ -1,0 +1,6 @@
+<div ng-if="searchQuery">
+        <p class="lead">{{recipesFound.count}} recipes found matching the query: {{searchQuery}}.</p>
+        <dl ng-repeat="recipe in recipeFound.list">
+          <dt>{{recipe.matches[0].sourceDisplayName}}</dt>
+        </dl>
+      </div>

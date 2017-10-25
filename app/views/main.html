@@ -42,21 +42,22 @@
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
-      <img class="card-img-top" src="/images/fruits-155616_960_720.png" alt="Featured Recipe 1">
+      <img class="card-img-top" src="{{current.matches[0].imageUrlsBySize[90]}}" alt="Featured Recipe 1">
       <div class="card-body">
         <h4 class="card-title">Featured Recipe</h4>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">{{current.matches[0].recipeName}}</p>
         <a href="#" class="btn btn-primary">View Recipe</a>
       </div>
     </div>
   </div>
   <div class="col-sm-6">
     <div class="card">
-      <img class="card-img-top" src="/images/fruits-155616_960_720.png" alt="Featured Recipe 2">
+      <img class="card-img-top" src="{{current.matches[1].imageUrlsBySize[90]}}" alt="Featured Recipe 2">
       <div class="card-body">
         <h4 class="card-title">Featured Recipe</h4>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">View Recipe</a>
+        <p class="card-text">{{current.matches[1].recipeName}}</p>
+        <a href="/#!/recipes" class="btn btn-primary">View Recipe</a>
+
       </div>
     </div>
   </div>

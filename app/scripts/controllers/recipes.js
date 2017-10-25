@@ -8,10 +8,6 @@
  * Controller of the meatlessinseattleApp
  */
 angular.module('meatlessinseattleApp')
-  .controller('RecipesCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('RecipesCtrl', function ($scope, recipes) {
+    $scope.recipes = recipes.query();
   });
