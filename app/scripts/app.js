@@ -31,6 +31,11 @@ angular
         controller: 'RecipesCtrl',
         //controllerAs: 'recipes'
       })
+      .when('/searchresults', {
+        templateUrl: 'views/searchresults.html',
+        controller: 'SearchResultsCtrl',
+        //controllerAs: 'searchResults'
+      })
       .otherwise({
         redirectTo: '/'
       });

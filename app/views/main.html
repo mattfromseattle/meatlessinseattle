@@ -1,19 +1,4 @@
-<div class="jumbotron">
-  <form action="#" method="GET">
-    <div class="row">
-      <div class="col-xs-12 col-md-12 col-lg-12">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="What would you like to make today?" id="txtSearch" />
-          <div class="input-group-btn">
-            <button class="btn btn-primary" type="submit" role="Search">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </form>
-</div>
+
 
 <!-- Sidebar links to more resources -->
 <div class="col-3 col-md-4 sidebar-offcanvas" id="sidebar">
@@ -42,10 +27,11 @@
 <div class="row">
   <div class="col-sm-6">
     <div class="card">
-      <img class="card-img-top" src="{{current.matches[0].imageUrlsBySize[90]}}" alt="Featured Recipe 1">
+      <img class="img-fluid" src="{{current.matches[0].imageUrlsBySize[90]}}" alt="Featured Recipe 1">
       <div class="card-body">
         <h4 class="card-title">Featured Recipe</h4>
         <p class="card-text">{{current.matches[0].recipeName}}</p>
+        <p class="card-text">{{current.matches[0].ingredients}}</p>
         <a href="#" class="btn btn-primary">View Recipe</a>
       </div>
     </div>
@@ -56,6 +42,7 @@
       <div class="card-body">
         <h4 class="card-title">Featured Recipe</h4>
         <p class="card-text">{{current.matches[1].recipeName}}</p>
+        <p class="card-text">{{current.matches[1].ingredients}}</p>
         <a href="/#!/recipes" class="btn btn-primary">View Recipe</a>
 
       </div>

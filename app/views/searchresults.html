@@ -1,6 +1,16 @@
-<div ng-if="searchQuery">
-        <p class="lead">{{recipesFound.count}} recipes found matching the query: {{searchQuery}}.</p>
-        <dl ng-repeat="recipe in recipeFound.list">
-          <dt>{{recipe.matches[0].sourceDisplayName}}</dt>
-        </dl>
+<div class="jumbotron">
+    <form action="#" method="GET">
+      <div class="row">
+        <div class="col-xs-12 col-md-12 col-lg-12">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="What would you like to make today?" id="txtSearch" />
+            <div class="input-group-btn">
+              <button class="btn btn-primary" type="submit" role="Search">
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
+    </form>
+  </div>
