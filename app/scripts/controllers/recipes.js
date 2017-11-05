@@ -8,6 +8,6 @@
  * Controller of the meatlessinseattleApp
  */
 angular.module('meatlessinseattleApp')
-  .controller('RecipesCtrl', function ($scope, recipes) {
-    $scope.recipes = recipes.query();
+  .controller('RecipesCtrl', function ($scope,current) {
+    $scope.current = current.query();
   });
