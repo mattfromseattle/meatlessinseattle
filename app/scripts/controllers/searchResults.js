@@ -9,5 +9,12 @@
  */
 angular.module('meatlessinseattleApp')
   .controller('SearchResultsCtrl', function ($scope) {
-    $scope.current = current.query();
+    $scope.recipesFound = recipesearch.find();
+
+    $scope.findRecipes = function(){
+      $scope.recipesFound = recipesearch.find({
+        query: $scope.ingredients
+      });
+      $scope.searchQuery = $scope.ingredients;
+    };
   });

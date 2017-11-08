@@ -43,3 +43,15 @@
     "test": "karma start test/karma.conf.js"
   }
 }
+
+{
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/prettier/bin/prettier.js --tab-width 4 --write",
+      "git add"
+    ]
+  }
+}
