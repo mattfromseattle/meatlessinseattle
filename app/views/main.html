@@ -1,54 +1,53 @@
-<div class="jumbotron">
-    <form action="#" method="GET">
-        <div class="row">
-            <div class="col-xs-12 col-md-12 col-lg-12">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="What would you like to make today?" id="txtSearch" />
-                    <div class="input-group-btn">
-                        <button class="btn btn-primary" type="submit" role="Search">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </form>
+<!-- Search bar -->
+<div ng-app class="jumbotron" ng-controller="MainCtrl">
+  <h1>Ingredients</h1>
+  <p class="lead">
+    <div ng-init="allowedIngredient='tofu'">
+      <p>
+        <label for="allowedIngredient">Ingredients:
+        <input type="text" name="allowedIngredient" ng-model="recipe">
+      </label>
+      </p>
+      <p>
+        <button class="btn btn-lg btn-primary" ng-click "findRecipes()">Search</button>
+      </p>
+    </div>
 </div>
-
+<!-- / Search bar -->
 <!-- Sidebar links to more resources -->
 <div class="col-3 col-md-4 sidebar-offcanvas" id="sidebar">
-    <ul class="list-group">
-        <li class="list-group-item active" role="Why Vegan?">Resources</li>
-        <a href="http://vegankit.com/why/" class="list-group-item list-group-item-action" target="_blank" id="reasonsToGoVegan">Why Vegan?</a>
-        <a href="https://www.healthline.com/nutrition/vegan-diet-benefits" class="list-group-item list-group-item-action" target="_blank" id="healthBenefits">Benefits</a>
-        <a href="http://www.chooseveg.com/environment" class="list-group-item list-group-item-action" target="_blank" id="environmentalBenefits">Environtmental Facts</a>
-        <a href="http://thevegancalculator.com/" class="list-group-item list-group-item-action" target="_blank" id="veganCalculator">Vegan Calculator</a>
-        <a href="https://www.vegan.com/" class="list-group-item list-group-item-action" target="_blank" id="nextSteps">Okay, what next?</a>
-        <a href="https://vimeo.com/209647801" class="list-group-item list-group-item-action" target="_blank" id="earthlings"></font>Earthlings Documentary <br><strong><font color="red">*GRAPHIC CONTENT*</font></strong></a>
-    </ul>
+  <ul class="list-group">
+    <li class="list-group-item active" role="Why Vegan?">Resources</li>
+    <a href="http://vegankit.com/why/" class="list-group-item list-group-item-action" target="_blank" id="reasonsToGoVegan">Why Vegan?</a>
+    <a href="https://www.healthline.com/nutrition/vegan-diet-benefits" class="list-group-item list-group-item-action" target="_blank" id="healthBenefits">Benefits</a>
+    <a href="http://www.chooseveg.com/environment" class="list-group-item list-group-item-action" target="_blank" id="environmentalBenefits">Environtmental Facts</a>
+    <a href="http://thevegancalculator.com/" class="list-group-item list-group-item-action" target="_blank" id="veganCalculator">Vegan Calculator</a>
+    <a href="https://www.vegan.com/" class="list-group-item list-group-item-action" target="_blank" id="nextSteps">Okay, what next?</a>
+    <a href="https://vimeo.com/209647801" class="list-group-item list-group-item-action" target="_blank" id="earthlings"></font>Earthlings Documentary <br><strong><font color="red">*GRAPHIC CONTENT*</font></strong></a>
+  </ul>
 </div>
 <!-- /sidebar -->
 
 <!-- Google map with highlighted restaurants in the area -->
 <div class="map-container">
-    <iframe width="670" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDxAizBO0ZYynJASyU_zS34vpalo6Xqbjo&q=vegetarian+vegan+restaurant,98101" allowfullscreen="true">
+  <iframe width="670" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?key=AIzaSyDxAizBO0ZYynJASyU_zS34vpalo6Xqbjo&q=vegetarian+vegan+restaurant,98101" allowfullscreen="true">
   </iframe>
 </div>
 <!-- /map -->
 <div class="featured-recipe">
-    <h2>Featured Recipes</h2>
-    <div class="row">
-        <div ng-init="limit = 3">
-            <div ng-repeat="recipes in current.matches | limitTo: limit as results">
-                <div class="clearfix" ng-if="$index % 3 == 0"></div>
-                <div class="col-md-8 col-lg-4">
-                    <img class="card-img-top" src="{{recipes.imageUrlsBySize[90]}}" alt="Featured Recipe Image">
-                    <h4>{{recipes.recipeName}}</h4>
-                    <p class="card-text">Rating:{{recipes.rating}}/5</p>
-                    <a href="/#!/recipes" class="btn btn-primary">View Recipe</a>
-                    <hr>
-                </div>
-            </div>
+  <h2>Featured Recipes</h2>
+  <div class="row">
+    <div ng-init="limit = 3">
+      <div ng-repeat="recipes in current.matches | limitTo: limit as results">
+        <div class="clearfix" ng-if="$index % 3 == 0"></div>
+        <div class="col-md-8 col-lg-4">
+          <img class="card-img-top" src="{{recipes.imageUrlsBySize[90]}}" alt="Featured Recipe Image">
+          <h4>{{recipes.recipeName}}</h4>
+          <p class="card-text">Rating:{{recipes.rating}}/5</p>
+          <a href="/#!/recipes" class="btn btn-primary">View Recipe</a>
+          <hr>
         </div>
+      </div>
     </div>
+  </div>
 </div>

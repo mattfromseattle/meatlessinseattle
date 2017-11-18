@@ -11,5 +11,3 @@ angular.module('meatlessinseattleApp')
   .controller('RecipesCtrl', function ($scope,current) {
     $scope.current = current.query();
   });
-
-  'use strict';
