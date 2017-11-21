@@ -36,6 +36,11 @@ angular
                 controller: 'InformationCtrl',
                 //controllerAs: 'recipes'
             })
+            .when('/recipeDetail', {
+                templateUrl: 'views/recipedetail.html',
+                controller: 'RecipesCtrl',
+                //controllerAs: 'recipes'
+            })
             .otherwise({
                 redirectTo: '/'
             });

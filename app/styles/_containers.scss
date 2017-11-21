@@ -43,6 +43,14 @@ body {
   transform: scale(1.1);
 }
 
+.showMore {
+  bottom: 10px;
+  background-color: $links;
+  border-color: #191b1c;
+  transition: all 0.2s ease-in-out;
+  align-content: center;
+}
+
 .map-container {
   position: relative;
   padding-bottom: 56.25%;

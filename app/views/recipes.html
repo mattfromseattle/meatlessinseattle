@@ -1,11 +1,11 @@
 <!-- Search bar -->
-<div ng-app class="jumbotron" ng-controller="MainCtrl">
+<div ng-app class="col-sm-6 col-md-12 col-lg-12" ng-controller="RecipesCtrl">
   <h1>Ingredients</h1>
   <p class="lead">
-    <div ng-init="allowedIngredient='tofu'">
+    <div ng-init="allowedIngredient=''">
       <p>
-        <label for="allowedIngredient">Ingredients:
-        <input type="text" name="allowedIngredient" ng-model="recipe">
+        <label for="allowedIngredient">Ingredient:
+        <input type="text" name="allowedIngredient" ng-model="allowedIngredient">
       </label>
       </p>
       <p>
@@ -16,10 +16,20 @@
 
     <!-- Search results -->
     <div ng-if="searchQuery">
-      <dl ng-repeat="recipes in recipesFound.list">
-        <dt>{{recipe.sourceDisplayName}}</dt>
-      </dl>
-    </div>
+      <div class="results-recipe">
+        <div class="row">
+            <div ng-repeat="recipe in recipesFound.matches | limitTo: limit as results">
+              <div class="clearfix" ng-if="$index % 3 == 0"></div>
+              <div class="col-md-8 col-lg-4">
+                <img class="card-img-top" src="{{recipe.imageUrlsBySize[90]}}" alt="Featured Recipe Image">
+                <h4>{{recipe.recipeName}}</h4>
+                <p class="card-text">Rating:{{recipe.rating}}/5</p>
+                <a href="/#!/recipes" class="btn btn-primary">View Recipe</a>
+                <hr>
+              </div>
+            </div>
+        </div>
+      </div>
   </p>
-</div>
-<!-- /Search results -->
+  </div>
+</div <!-- /Search results -->
