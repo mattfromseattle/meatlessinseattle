@@ -1,6 +1,5 @@
 <!-- Search bar -->
 <div ng-app class="col-sm-6 col-md-12 col-lg-12" ng-controller="RecipesCtrl">
-  <h1>Ingredients</h1>
   <p class="lead">
     <div ng-init="allowedIngredient=''">
       <p>
@@ -18,16 +17,16 @@
     <div ng-if="searchQuery">
       <div class="results-recipe">
         <div class="row">
-            <div ng-repeat="recipe in recipesFound.matches | limitTo: limit as results">
-              <div class="clearfix" ng-if="$index % 3 == 0"></div>
-              <div class="col-md-8 col-lg-4">
-                <img class="card-img-top" src="{{recipe.imageUrlsBySize[90]}}" alt="Featured Recipe Image">
-                <h4>{{recipe.recipeName}}</h4>
-                <p class="card-text">Rating:{{recipe.rating}}/5</p>
-                <a href="/#!/recipes" class="btn btn-primary">View Recipe</a>
-                <hr>
-              </div>
+          <div ng-repeat="recipe in recipesFound.matches | limitTo: limit as results">
+            <div class="clearfix" ng-if="$index % 3 == 0"></div>
+            <div class="col-md-8 col-lg-4">
+              <img class="card-img-top" src="{{recipe.imageUrlsBySize[90]}}" alt="Featured Recipe Image">
+              <h4>{{recipe.recipeName}}</h4>
+              <p class="card-text">Rating:{{recipe.rating}}/5</p>
+              <a href="https://yummly.com/#recipe/{{recipe.id}}" class="btn btn-primary" target="_blank">View Recipe</a>
+              <hr>
             </div>
+          </div>
         </div>
       </div>
   </p>

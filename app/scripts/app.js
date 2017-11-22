@@ -36,10 +36,10 @@ angular
                 controller: 'InformationCtrl',
                 //controllerAs: 'recipes'
             })
-            .when('/recipeDetail', {
-                templateUrl: 'views/recipedetail.html',
-                controller: 'RecipesCtrl',
-                //controllerAs: 'recipes'
+            .when('/recipedetail', {
+              templateUrl: 'views/recipedetail.html',
+              controller: 'RecipedetailCtrl',
+              controllerAs: 'recipedetail'
             })
             .otherwise({
                 redirectTo: '/'

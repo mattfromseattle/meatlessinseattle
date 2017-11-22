@@ -168,3 +168,27 @@ body {
     top: 70px;
   }
 }
+
+.col-sm-6.col-md-12.col-lg-12{
+  background-color: $highlights;
+  border-radius: 5px;
+  right: 15px;
+  height: 130px;
+  padding: 10px;
+
+  .btn.btn-lg.btn-primary {
+    position: relative;
+    top: 5px;
+    width: 100%;
+    background-color: $links;
+  }
+  .btn.btn-lg.btn-primary:hover {
+    transform: scale(1.0);
+    background-color: $links;
+  }
+
+}
+
+.col-md-8.col-lg-4 {
+  padding: 15px;
+}
