@@ -10,7 +10,7 @@
 angular.module('meatlessinseattleApp')
   .controller('RecipedetailCtrl', function ($scope, $routeParams, current, recipedetail) {
     // Begin recipe search functionality
-    var id = {{recipe.id}};
+    
     $scope.recipedeID = $routeParams.recipeID;
 
     $scope.recipeDetail = recipedetail.query({
