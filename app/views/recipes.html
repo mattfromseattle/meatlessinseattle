@@ -23,7 +23,7 @@
               <img class="card-img-top" src="{{recipe.imageUrlsBySize[90]}}" alt="Featured Recipe Image">
               <h4>{{recipe.recipeName}}</h4>
               <p class="card-text">Rating:{{recipe.rating}}/5</p>
-              <a ng-href="/#!/recipedetail/{{recipeid}}" class="btn btn-primary" for="recipeID">View Recipe</a>
+              <a ng-href="/#!/recipedetail/:{{recipes.id}}" class="btn btn-primary">View Recipe</a>
               <hr>
             </div>
           </div>
