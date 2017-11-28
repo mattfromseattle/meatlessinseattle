@@ -1,16 +1,30 @@
-<div class="jumbotron">
-  <h2>{{recipeDetail.name}}</h2>
-</div>
+<!--Card-->
+<div class="card card-cascade wider reverse my-4">
 
-<div class="displayed-recipe">
-  <img class="card-img-top" src="{{recipeDetail.images.hostedLargeUrl}}" alt="Recipe Image">
-  <ul>
-    <h2>Ingredients:</h2>
+  <!--Card image-->
+  <div class="view overlay hm-white-slight">
+    <img src="{{recipeDetail.images[0].imageUrlsBySize[360]}}" class="img-fluid">
+  </div>
+  <!--/Card image-->
+
+  <!--Card content-->
+  <div class="card-body text-center">
+    <!--Title-->
+    <h2>{{recipeDetail.name}}</h2>
     <li ng-repeat="ingredient in recipeDetail.ingredientLines">{{ingredient}}</li>
+
     <h4>Prep Time: {{recipeDetail.prepTime}}</h4>
     <h4>Cook Time: {{recipeDetail.cookTime}}</h4>
     <h4>Total Time: {{recipeDetail.totalTime}}</h4>
-  </ul>
-  <hr>
-  {{recipeDetail.attribution.text}}
+    </ul>
+    <hr>
+    <div class="attribution">
+      <a href="{{recipeDetail.attribution.url}}">Recipe Source</a><br>
+      {{recipeDetail.attribution.text}}<br>
+      <img src="{{recipeDetail.attribution.logo}}" alt="">
+    </div>
+  </div>
+  <!--/.Card content-->
+
 </div>
+<!--/.Card-->

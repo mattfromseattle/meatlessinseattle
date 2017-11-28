@@ -121,25 +121,6 @@ body {
   }
 }
 
-.displayed-recipe {
-  height: 425px;
-
-  h2 {
-    background-color: $highlights;
-    border-radius: 5px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-
-  h4 {
-    height: 60px;
-  }
-
-  li {
-    list-style: none;
-  }
-}
-
 .all-recipes {
   height: 425px;
 
@@ -210,4 +191,17 @@ body {
 
 .col-md-8.col-lg-4 {
   padding: 15px;
+}
+
+.card.card-cascade.wider.reverse.my-4 {
+  text-align: center;
+  li {
+    list-style: none;
+  }
+}
+
+.card-body.text-center.ng-binding {
+  border-style: solid;
+  border-width: thin;
+  border-color: $dark-black;
 }
